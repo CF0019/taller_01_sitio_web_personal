@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Recomendaciones de café según gustos y momentos del día.">
+	<title>Entre Tazas | Recomendaciones</title>
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<header class="encabezado">
+		<div class="contenedor barra">
+			<a class="logo" href="index.html">Entre Tazas</a>
+			<nav aria-label="Navegación principal">
+				<ul class="menu">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="metodos.html">Métodos</a></li>
+					<li><a class="activo" href="recomendaciones.html">Recomendaciones</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="cabecera-pagina">
+			<div class="contenedor">
+				<p class="etiqueta">ENCUENTRA TU ESTILO</p>
+				<h1>¿Qué café va contigo?</h1>
+				<p>Usa estas referencias para elegir por dónde comenzar y, si quieres, cuéntame qué tipo de café prefieres.</p>
+			</div>
+		</section>
+
+		<section class="seccion">
+			<div class="contenedor recomendaciones-grid">
+				<div class="preferencias">
+					<h2>Según lo que buscas</h2>
+					<div class="preferencia">
+						<strong>☕ Algo fuerte</strong>
+						<span>Prueba una preparación con cuerpo marcado, como la prensa francesa.</span>
+					</div>
+					<div class="preferencia">
+						<strong>🌿 Algo aromático</strong>
+						<span>Un método filtrado puede ayudarte a notar mejor los aromas y matices.</span>
+					</div>
+					<div class="preferencia">
+						<strong>🧊 Algo refrescante</strong>
+						<span>El cold brew es una opción sencilla para tomar café frío.</span>
+					</div>
+				</div>
+
+				<form class="formulario" action="#" method="get">
+					<div>
+						<p class="etiqueta">CUÉNTAME</p>
+						<h2>¿Qué te gustaría probar?</h2>
+						<p>Este formulario no envía datos a un servidor; sirve como parte interactiva del proyecto.</p>
+					</div>
+
+					<div class="campo">
+						<label for="nombre">Nombre</label>
+						<input type="text" id="nombre" name="nombre" minlength="2" maxlength="40" required>
+					</div>
+
+					<div class="campo">
+						<label for="correo">Correo electrónico</label>
+						<input type="email" id="correo" name="correo" required>
+					</div>
+
+					<div class="campo">
+						<label for="metodo">Método que te interesa</label>
+						<select id="metodo" name="metodo" required>
+							<option value="">Selecciona una opción</option>
+							<option value="prensa">Prensa francesa</option>
+							<option value="v60">V60</option>
+							<option value="cold-brew">Cold brew</option>
+						</select>
+					</div>
+
+					<fieldset class="campo">
+						<legend>¿Cómo prefieres tu café?</legend>
+						<label class="radio"><input type="radio" name="preferencia" value="caliente" required> Caliente</label>
+						<label class="radio"><input type="radio" name="preferencia" value="frio"> Frío</label>
+					</fieldset>
+
+					<div class="campo">
+						<label for="mensaje">Cuéntame qué buscas</label>
+						<textarea id="mensaje" name="mensaje" minlength="10" maxlength="250" required></textarea>
+					</div>
+
+					<label class="check"><input type="checkbox" name="aceptacion" required> Confirmo que la información es solo para esta demostración.</label>
+
+					<button class="boton" type="submit">Enviar respuesta</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="pie">
+		<div class="contenedor pie-grid">
+			<div>
+				<strong>Entre Tazas</strong>
+				<p>Una guía personal para descubrir el café.</p>
+			</div>
+			<p>Proyecto académico · HTML5 + CSS3</p>
+		</div>
+	</footer>
+</body>
+</html>

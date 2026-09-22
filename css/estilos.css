@@ -1,0 +1,487 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--fondo: #f5f1e9;
+	--superficie: #fffdf8;
+	--texto: #2d2925;
+	--suave: #756d65;
+	--acento: #9a5d35;
+	--acento-oscuro: #704125;
+	--borde: #e4dbcf;
+	--sombra: 0 14px 35px rgba(65, 45, 30, 0.08);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--fondo);
+	color: var(--texto);
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.6;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.contenedor {
+	width: min(1120px, 92%);
+	margin: 0 auto;
+}
+
+.encabezado {
+	background: rgba(255, 253, 248, 0.96);
+	border-bottom: 1px solid var(--borde);
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.barra {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	min-height: 76px;
+	gap: 30px;
+}
+
+.logo {
+	font-family: Georgia, serif;
+	font-size: 1.45rem;
+	font-weight: bold;
+	letter-spacing: -0.03em;
+}
+
+.menu {
+	display: flex;
+	gap: 28px;
+	list-style: none;
+}
+
+.menu a {
+	color: var(--suave);
+	font-size: 0.95rem;
+	padding: 8px 0;
+}
+
+.menu a:hover,
+.menu .activo {
+	color: var(--acento);
+}
+
+.hero {
+	padding: 90px 0;
+}
+
+.hero-grid {
+	align-items: center;
+	display: grid;
+	gap: 60px;
+	grid-template-columns: 1.45fr 0.75fr;
+}
+
+.etiqueta {
+	color: var(--acento);
+	font-size: 0.75rem;
+	font-weight: bold;
+	letter-spacing: 0.18em;
+	margin-bottom: 14px;
+}
+
+h1,
+h2,
+h3 {
+	font-family: Georgia, "Times New Roman", serif;
+	line-height: 1.15;
+}
+
+h1 {
+	font-size: clamp(2.7rem, 6vw, 5.3rem);
+	letter-spacing: -0.055em;
+	max-width: 850px;
+}
+
+.hero-texto {
+	color: var(--suave);
+	font-size: 1.12rem;
+	margin: 25px 0;
+	max-width: 650px;
+}
+
+.acciones {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.boton {
+	background: var(--acento);
+	border: 1px solid var(--acento);
+	border-radius: 7px;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font: inherit;
+	font-weight: bold;
+	padding: 12px 20px;
+}
+
+.boton:hover {
+	background: var(--acento-oscuro);
+	border-color: var(--acento-oscuro);
+}
+
+.boton.secundario {
+	background: transparent;
+	color: var(--acento);
+}
+
+.hero-card {
+	background: var(--texto);
+	border-radius: 14px;
+	box-shadow: var(--sombra);
+	color: white;
+	padding: 40px;
+	transform: rotate(2deg);
+}
+
+.hero-card span {
+	display: block;
+	font-size: 3.5rem;
+	margin-bottom: 25px;
+}
+
+.hero-card h2 {
+	font-size: 1.8rem;
+	margin-bottom: 12px;
+}
+
+.hero-card p {
+	color: #d7d0c9;
+}
+
+.seccion {
+	padding: 85px 0;
+}
+
+.encabezado-seccion {
+	max-width: 620px;
+	margin-bottom: 40px;
+}
+
+.encabezado-seccion h2 {
+	font-size: clamp(2rem, 4vw, 3.3rem);
+}
+
+.tarjetas {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.tarjeta {
+	background: var(--superficie);
+	border: 1px solid var(--borde);
+	border-radius: 10px;
+	padding: 30px;
+}
+
+.icono,
+.numero {
+	color: var(--acento);
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.12em;
+	margin-bottom: 30px;
+}
+
+.tarjeta h3 {
+	font-size: 1.7rem;
+	margin-bottom: 12px;
+}
+
+.tarjeta p,
+.tarjeta a {
+	color: var(--suave);
+}
+
+.tarjeta a {
+	display: inline-block;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.destacado {
+	background: var(--texto);
+	color: white;
+	padding: 75px 0;
+}
+
+.destacado-grid,
+.nota-box {
+	align-items: center;
+	display: grid;
+	gap: 50px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.destacado h2 {
+	font-size: clamp(2rem, 4vw, 3.3rem);
+}
+
+.destacado p:last-child {
+	color: #d7d0c9;
+	font-size: 1.05rem;
+}
+
+.cabecera-pagina {
+	padding: 75px 0 45px;
+}
+
+.cabecera-pagina h1 {
+	font-size: clamp(2.8rem, 6vw, 4.8rem);
+}
+
+.cabecera-pagina > div > p:last-child {
+	color: var(--suave);
+	font-size: 1.05rem;
+	margin-top: 20px;
+	max-width: 650px;
+}
+
+.metodos-grid {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.metodo {
+	background: var(--superficie);
+	border: 1px solid var(--borde);
+	border-radius: 10px;
+	padding: 32px;
+}
+
+.metodo h2 {
+	font-size: 2rem;
+	margin-bottom: 15px;
+}
+
+.metodo p {
+	color: var(--suave);
+	margin-bottom: 25px;
+}
+
+.metodo ul {
+	border-top: 1px solid var(--borde);
+	list-style: none;
+	padding-top: 18px;
+}
+
+.metodo li {
+	font-size: 0.92rem;
+	margin: 8px 0;
+}
+
+.nota {
+	padding: 0 0 85px;
+}
+
+.nota-box {
+	background: #e8ded1;
+	border-radius: 12px;
+	padding: 45px;
+}
+
+.nota h2 {
+	font-size: 2.3rem;
+}
+
+.recomendaciones-grid {
+	align-items: start;
+	display: grid;
+	gap: 55px;
+	grid-template-columns: 0.8fr 1.2fr;
+}
+
+.preferencias h2,
+.formulario h2 {
+	font-size: 2.4rem;
+	margin-bottom: 20px;
+}
+
+.preferencia {
+	border-bottom: 1px solid var(--borde);
+	display: grid;
+	gap: 4px;
+	padding: 20px 0;
+}
+
+.preferencia span {
+	color: var(--suave);
+}
+
+.formulario {
+	background: var(--superficie);
+	border: 1px solid var(--borde);
+	border-radius: 12px;
+	box-shadow: var(--sombra);
+	display: grid;
+	gap: 18px;
+	padding: 35px;
+}
+
+.formulario > div:first-child p:last-child {
+	color: var(--suave);
+}
+
+.campo {
+	display: grid;
+	gap: 7px;
+}
+
+.campo label,
+.legend {
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+
+input,
+select,
+textarea {
+	background: white;
+	border: 1px solid #cfc4b7;
+	border-radius: 6px;
+	font: inherit;
+	padding: 11px 12px;
+	width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	border-color: var(--acento);
+	outline: 2px solid rgba(154, 93, 53, 0.15);
+}
+
+textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+fieldset {
+	border: 0;
+}
+
+fieldset legend {
+	font-size: 0.9rem;
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+
+.radio,
+.check {
+	align-items: center;
+	display: flex;
+	font-size: 0.9rem;
+	font-weight: normal;
+	gap: 8px;
+}
+
+.radio input,
+.check input {
+	width: auto;
+}
+
+.pie {
+	border-top: 1px solid var(--borde);
+	padding: 35px 0;
+}
+
+.pie-grid {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	gap: 25px;
+}
+
+.pie p {
+	color: var(--suave);
+	font-size: 0.85rem;
+}
+
+@media (max-width: 800px) {
+	.barra {
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 18px 0;
+	}
+
+	.menu {
+		gap: 18px;
+	}
+
+	.hero {
+		padding: 60px 0;
+	}
+
+	.hero-grid,
+	.destacado-grid,
+	.recomendaciones-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.hero-card {
+		transform: none;
+	}
+
+	.tarjetas,
+	.metodos-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.seccion {
+		padding: 60px 0;
+	}
+
+	.nota-box {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.pie-grid {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 480px) {
+	h1 {
+		font-size: 2.6rem;
+	}
+
+	.menu {
+		flex-wrap: wrap;
+	}
+
+	.acciones {
+		flex-direction: column;
+	}
+
+	.boton {
+		text-align: center;
+		width: 100%;
+	}
+
+	.formulario,
+	.nota-box {
+		padding: 25px;
+	}
+}
